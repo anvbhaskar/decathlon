@@ -1,5 +1,7 @@
 package com.decathlon.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,8 +34,8 @@ public class Product {
 	private String productDescription;
 	
 	@ManyToOne
-	@JoinColumn(name="associatedStores")
-	public Store associatedStores;
+	@JoinColumn(name="associatedStores",referencedColumnName="store_Id")
+	public List<Store> associatedStores;
 
 	public Integer getProductId() {
 		return productId;
@@ -75,13 +77,15 @@ public class Product {
 		this.productDescription = productDescription;
 	}
 
-	public Store getAssociatedStores() {
+	public List<Store> getAssociatedStores() {
 		return associatedStores;
 	}
 
-	public void setAssociatedStores(Store associatedStores) {
+	public void setAssociatedStores(List<Store> associatedStores) {
 		this.associatedStores = associatedStores;
 	}
+
+	
 	
 	
 }
