@@ -22,8 +22,8 @@ public class Store {
 	@Column(name="store_Name")
 	private String storeName;
 	
-	@Column(name="store_Description")
-	private String storeDescription;
+	@Column(name="store_City")
+	private String storeCity;
 	
 	@OneToMany(mappedBy="associatedStores")
 	public List<Product> products;
@@ -44,12 +44,13 @@ public class Store {
 		this.storeName = storeName;
 	}
 
-	public String getStoreDescription() {
-		return storeDescription;
+
+	public String getStoreCity() {
+		return storeCity;
 	}
 
-	public void setStoreDescription(String storeDescription) {
-		this.storeDescription = storeDescription;
+	public void setStoreCity(String storeCity) {
+		this.storeCity = storeCity;
 	}
 
 	public List<Product> getProducts() {

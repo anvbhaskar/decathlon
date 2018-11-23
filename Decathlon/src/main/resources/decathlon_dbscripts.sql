@@ -15,9 +15,24 @@ CREATE TABLE `product` (
 
 CREATE TABLE `store` (
   `store_id` int(11) NOT NULL AUTO_INCREMENT,
-  `store_description` varchar(255) DEFAULT NULL,
+  `store_city` varchar(255) DEFAULT NULL,
   `store_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`store_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
+
+select * from store;
+
+insert into store (store_name,store_city) values ('sports','Bengaluru');
+
+insert into store (store_name,store_city) values ('kids','Hyderabad');
+
+
+select * from product;
+
+
+insert into product(product_description,product_level,product_name,product_sport,associated_stores) values ('Ball descp','small','Ball','sports',1);
+
+insert into product(product_description,product_level,product_name,product_sport,associated_stores) values ('bag descp','Medium','Bag','Kids',2);
+
 
 
