@@ -34,8 +34,8 @@ public class Product {
 	private String productDescription;
 	
 	@ManyToOne
-	@JoinColumn(name="associatedStores",referencedColumnName="store_Id")
-	public List<Store> associatedStores;
+	@JoinColumn(name="associatedStores")
+	public Store associatedStores;
 
 	public Integer getProductId() {
 		return productId;
@@ -77,14 +77,15 @@ public class Product {
 		this.productDescription = productDescription;
 	}
 
-	public List<Store> getAssociatedStores() {
+	public Store getAssociatedStores() {
 		return associatedStores;
 	}
 
-	public void setAssociatedStores(List<Store> associatedStores) {
+	public void setAssociatedStores(Store associatedStores) {
 		this.associatedStores = associatedStores;
 	}
 
+	
 	
 	
 	

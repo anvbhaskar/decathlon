@@ -1,5 +1,7 @@
 package com.decathlon.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +26,7 @@ public class Store {
 	private String storeDescription;
 	
 	@OneToMany(mappedBy="associatedStores")
-	public Product products;
+	public List<Product> products;
 
 	public Integer getStoreId() {
 		return storeId;
@@ -50,13 +52,13 @@ public class Store {
 		this.storeDescription = storeDescription;
 	}
 
-	public Product getProducts() {
+	public List<Product> getProducts() {
 		return products;
 	}
 
-	public void setProducts(Product products) {
+	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
-	
+
 	
 }
